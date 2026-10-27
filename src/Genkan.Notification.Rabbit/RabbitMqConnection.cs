@@ -27,7 +27,7 @@ public sealed class RabbitMqConnection(IOptions<RabbitOptions> options) : IAsync
                 AutomaticRecoveryEnabled = true,   // reconnect automatically (non-functional requirement)
                 TopologyRecoveryEnabled = true,
             };
-            _connection = await factory.CreateConnectionAsync("genkan-notification", ct);
+            _connection = await factory.CreateConnectionAsync("notification", ct);
             return _connection;
         }
         finally { _gate.Release(); }

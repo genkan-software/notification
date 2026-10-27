@@ -1,8 +1,8 @@
-# genkan-notification
+# notification
 
 Consumes RabbitMQ workplace events, stores the notification log, sends FCM pushes.
 
-Part of Genkan. Architecture, endpoints and the full stack: see the **genkan-setup** repo.
+Part of Genkan. Architecture, endpoints and the full stack: see the **setup** repo.
 
 ## Layout
 
@@ -24,18 +24,18 @@ Genkan.Notification.slnx
 ```bash
 export GITHUB_PACKAGES_TOKEN=ghp_xxx
 dotnet build Genkan.Notification.slnx
-docker build --secret id=github_token,env=GITHUB_PACKAGES_TOKEN -t genkan-notification .
+docker build --secret id=github_token,env=GITHUB_PACKAGES_TOKEN -t notification .
 ```
 
 ## Configuration (env)
 
 `ConnectionStrings__Postgres`, `RabbitMq__Host/User/Password`, `Firebase__Enabled`, `Firebase__ProjectId`, `Firebase__Client__*`, `GOOGLE_APPLICATION_CREDENTIALS` (service-account JSON, mounted as a secret).
-The database schema is owned by **genkan-migrator** (run it first).
+The database schema is owned by **migrator** (run it first).
 
 ## CI / release
 
-- push to `main` -> image `ghcr.io/genkan-software/genkan-notification:main`, `:sha-xxxxxxx`, `:latest`
-- tag `vX.Y.Z` -> also `:X.Y.Z` and `:X.Y`. Normally created for you: tagging **genkan-setup** releases every service with the same version.
+- push to `main` -> image `ghcr.io/genkan-software/notification:main`, `:sha-xxxxxxx`, `:latest`
+- tag `vX.Y.Z` -> also `:X.Y.Z` and `:X.Y`. Normally created for you: tagging **setup** releases every service with the same version.
 - Pull requests only build.
 
 Secrets: if `GITHUB_TOKEN` cannot read the `Genkan.Shared` package, either grant this repo access in the package settings
