@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="src/Genkan.Notification.Domain/Genkan.Notification.Domain.csproj" />
+  <Project Path="src/Genkan.Notification.Infrastructure/Genkan.Notification.Infrastructure.csproj" />
+  <Project Path="src/Genkan.Notification.Firebase/Genkan.Notification.Firebase.csproj" />
+  <Project Path="src/Genkan.Notification.Application/Genkan.Notification.Application.csproj" />
+  <Project Path="src/Genkan.Notification.Rabbit/Genkan.Notification.Rabbit.csproj" />
+  <Project Path="src/Genkan.Notification.Api/Genkan.Notification.Api.csproj" />
+</Solution>

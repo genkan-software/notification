@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.*" />
+    <ProjectReference Include="..\Genkan.Notification.Domain\Genkan.Notification.Domain.csproj" />
+    <PackageReference Include="Genkan.Shared" Version="1.0.0" />
+  </ItemGroup>
+</Project>

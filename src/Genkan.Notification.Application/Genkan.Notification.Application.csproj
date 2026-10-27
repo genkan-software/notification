@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\Genkan.Notification.Domain\Genkan.Notification.Domain.csproj" />
+    <ProjectReference Include="..\Genkan.Notification.Infrastructure\Genkan.Notification.Infrastructure.csproj" />
+    <ProjectReference Include="..\Genkan.Notification.Firebase\Genkan.Notification.Firebase.csproj" />
+    <PackageReference Include="Genkan.Shared" Version="1.0.0" />
+  </ItemGroup>
+</Project>
